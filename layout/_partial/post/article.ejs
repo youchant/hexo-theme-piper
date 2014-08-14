@@ -1,0 +1,46 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope
+         itemprop="blogPost">
+
+    <div class="dropdown toc-trigger">
+        <a data-toggle="dropdown" href="#">目录</a>
+        <div class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+            <%- toc(post.content) %>
+        </div>
+    </div>
+
+    <div class="article-inner">
+        <%- partial('gallery') %>
+
+        <% if (post.link || post.title){ %>
+        <header class="article-header">
+            <%- partial('title', {class_name: 'article-title'}) %>
+        </header>
+        <% } %>
+
+        <div class="article-meta">
+            <%- partial('date', {class_name: 'article-date', date_format: null}) %>
+            <%- partial('category') %>
+        </div>
+
+        <hr/>
+
+        <div class="article-entry" itemprop="articleBody">
+            <% if (post.excerpt && index){ %>
+            <%- post.excerpt %>
+            <% if (theme.excerpt_link){ %>
+            <p class="article-more-link">
+                <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+            </p>
+            <% } %>
+            <% } else { %>
+            <%- post.content %>
+            <% } %>
+        </div>
+
+    </div>
+
+    <% if (!index){ %>
+    <%- partial('nav') %>
+    <% } %>
+
+</article>

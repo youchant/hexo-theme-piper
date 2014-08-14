@@ -21,9 +21,12 @@
       <nav id="sub-nav">
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
-      <div id="search-form-wrap">
-        <%- search_form({button: '&#xF002;'}) %>
-      </div>
+      <!--<div id="search-form-wrap">-->
+        <!--<%- search_form({button: '&#xF002;'}) %>-->
+      <!--</div>-->
     </div>
+      <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+      <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+      <% } %>
   </div>
 </header>

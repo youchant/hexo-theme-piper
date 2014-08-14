@@ -1,3 +1,114 @@
 @import "nib"
+@import "_variables"
 
 global-reset()
+
+body
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+h1, h2, h3
+  line-height 1.5
+h1
+  font-size: 21px
+h2
+  font-size: 15px
+h3
+  font-size: 14px
+hr
+  border: 1px dashed color-border
+strong
+  font-weight: bold
+em, cite
+  font-style: italic
+sup, sub
+  font-size: 0.75em
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+sup
+  top: -0.5em
+sub
+  bottom: -0.2em
+small
+  font-size: 0.85em
+acronym, abbr
+  border-bottom: 1px dotted
+ul, ol, dl
+  margin: 0 20px
+  line-height: line-height
+ul, ol
+  ul, ol
+    margin-top: 0
+    margin-bottom: 0
+ul
+  list-style: disc
+ol
+  list-style: decimal
+dt
+  font-weight: bold
+
+
+#header
+  position fixed
+  top 20px
+  left 40px
+
+  a
+    color black
+    text-decoration none
+
+#header-title
+  text-align center
+
+#logo-wrap
+  font-family '黑体', 'Times New Roman', sans-serif
+  font-size 40px
+#logo-wrap,
+#subtitle-wrap
+  margin-bottom 10px
+
+
+#sidebar
+  margin-top 20px
+
+  .widget-title
+    padding 5px 0
+    margin-top 15px
+    font bold 14px microsoft yahei
+    color #53bf6b
+    font-family "Microsoft Yahei"
+    border-bottom 2px solid #ddd
+  .category-list
+    padding 5px 0
+  .category-list-item
+    line-height 26px
+
+  .category-list-link
+    font-size 14px
+    :hover
+      color: #53bf6b
+
+  .category-list-count
+    font-family: 'Lucida', sans-serif
+    margin-left 10px
+    color gray
+    font-size 13px
+    &:before
+      content "("
+    &:after
+      content ")"
+
+
+#main
+  margin-left 250px
+  min-height 800px
+  border-left 1px solid #ddd
+  background-color #f9f9f5
+  color #2c3e50
+
+@import "_partial/article"
+@import "_partial/footer"
+@import "_partial/highlight"
+@import "_partial/dropdown"
+@import "_partial/toc"
+@import "_partial/post-item"

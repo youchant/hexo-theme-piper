@@ -1,0 +1,177 @@
+.article
+  padding-bottom 1px
+.article-inner
+  padding 1px 40px 20px 60px
+  font-family: Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+  color #2C3E50
+  border-bottom 1px solid color-border
+
+  a.article-title
+    font-size 24px
+    text-decoration none
+    color black
+    padding 0 10px
+    border-left 3px solid #53bf6b
+
+  h1.link-title
+    margin 30px 0 5px
+
+  .article-meta
+    margin-bottom 15px
+    padding 5px 10px
+    font-size 14px
+
+  .article-date
+    margin-right 20px
+
+  .article-category,
+  .article-date
+    display inline-block
+
+  .article-date,
+  .article-category-link
+    text-decoration none
+    color #bbb
+
+
+
+  blockquote
+    padding 10px 15px
+    border-left 5px solid #D6DBDF
+    background: none repeat scroll 0 0 rgba(102,128,153,.05)
+    p
+      margin-bottom 15px
+      &:last-child
+        margin-bottom 0
+
+  ul,ol
+    padding 0
+    margin 0 0 10px 25px
+  li
+    line-height 27px
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    font-weight 500
+    font-family Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif
+  h1
+    margin 50px 0 20px
+    font-size 30px
+  h2
+    margin 35px 0 20px
+    font-size 24px
+  h3
+    margin 20px 0
+    font-size 18px
+
+  p
+    font-size 16px
+    line-height 27px
+  p,
+  pre,
+  blockquote
+    margin 0 0 20px
+
+  hr
+    border 0
+    border-bottom 1px dashed #cfcfcf
+    margin 30px 0
+
+  dl
+    margin-bottom 20px
+  dt,
+  dd
+    margin-bottom 5px
+    margin-top 5px
+    line-height 27px
+  dt
+    font-weight 700
+  dd
+    margin-left 40px
+
+
+  table
+    width 100%
+    margin-bottom 20px
+    border 1px solid #ddd
+    border-left 0
+    background-color #fff
+    border-collapse separate
+
+    th
+      font-weight 700
+
+    th,
+    td
+      padding 8px
+      line-height 20px
+      text-align left
+      vertical-align top
+      border-top 1px solid #ddd
+
+    th,
+    td
+      border-left 1px solid #ddd
+
+    thead:first-child tr:first-child th
+      border-top 0
+
+    tbody > tr:nth-child(odd) > td,
+    tbody > tr:nth-child(odd) > th
+      background-color #f9f9f9
+
+#article-nav
+  clearfix()
+  position: relative
+  @media mq-normal
+    margin: 20px 0
+    &:before
+      absolute-center(8px)
+      content: ""
+      border-radius: 50%
+      background: color-border
+      box-shadow: 0 1px 2px #fff
+
+.article-nav-link-wrap
+  text-decoration: none
+  text-shadow: 0 1px #fff
+  color: color-grey
+  box-sizing: border-box
+  margin-top: block-margin
+  text-align: center
+  display: block
+  &:hover
+    color: color-default
+  @media mq-normal
+    width: 50%
+    margin-top: 0
+
+#article-nav-newer
+  @media mq-normal
+    float: left
+    text-align: right
+    padding-right: 20px
+
+#article-nav-older
+  @media mq-normal
+    float: right
+    text-align: left
+    padding-left: 20px
+
+.article-nav-caption
+  text-transform: uppercase
+  letter-spacing: 2px
+  color: color-border
+  line-height: 1em
+  font-weight: bold
+  #article-nav-newer &
+    margin-right: -2px
+
+.article-nav-title
+  font-size: 0.85em
+  line-height: line-height
+  margin-top: 0.5em
